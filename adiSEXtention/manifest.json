@@ -1,0 +1,48 @@
+{
+    "manifest_version" : 2,
+
+    "name": "adiSEXtention",
+    "description": "This adiSEXtention will replace every image with a sexy beast",
+    "version": "0.1",
+
+    "icons": {
+        "19": "ico/icon19.png",
+        "38": "ico/icon38.png",
+        "48": "ico/icon48.png",
+        "128": "ico/icon128.png"
+    },
+
+    "browser_action": { //page_actions only affect current tab
+        "default_icon": {
+            "16": "ico/icon16.png",
+            "24": "ico/icon24.png",
+            "32": "ico/icon32.png"
+        },
+        "default_title": "adiSEXtention" //default_popup: popup.html
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["adis.js"]
+        }
+    ],
+
+    "background": {
+        "scripts": [
+        "background.js"
+        ]
+    },
+
+    "web_accessible_resources": [
+        "img/adis1.png",
+        "img/adis2.png",
+        "img/adis3.png",
+        "img/adis4.png",
+        "img/adis5.png",
+        "img/adis6.png",
+        "img/adis7.png"
+    ]
+}
